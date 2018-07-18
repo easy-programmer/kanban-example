@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div class="page-header">
+      <h1>Kanban Board</h1>
+      <p class="lead">An example of a Kanban board, written in Vue.js</p>
+    </div>
+    <menu-bar></menu-bar>
     <router-view/>
   </div>
 </template>
 
 <script>
+import MenuBar from '@/components/MenuBar';
+
 export default {
-  name: 'App'
-}
+  name: 'app',
+  components: {
+    'menu-bar': MenuBar
+  }
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .page-header h1 {
+    font-weight: 300;
+  }
 </style>
